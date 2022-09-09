@@ -1,0 +1,45 @@
+<!-- <mat-progress-bar mode="indeterminate" *ngIf="Showprogressbar"></mat-progress-bar> -->
+<div class="maincontainer">
+    <div class="leftcontainer">
+        <div @fadein class="maincard">
+            <div>
+                <mat-icon>search</mat-icon>
+                <mat-form-field class="example-form-field" appearance="fill">
+                    <input type="text" matInput placeholder="Enter place..." [(ngModel)]="enteredplace">
+                </mat-form-field>
+            </div>
+            <div>
+                <button mat-raised-button color="warn" (click)="validatePlace()">Get it!</button>
+            </div>
+            <h3>{{name}}</h3>
+            <h3>{{region}}</h3>
+            <h3>{{country}}</h3>
+        </div>
+    </div>
+    <div class="rightcontainer">
+        <div @fadein [@rotate]="rotate" class="sidecard temparature">
+            <h1>Temperature</h1>
+            <strong class="value">{{temperature}}</strong>
+        </div>
+        <div @fadein [@rotate]="rotate" class="sidecard condition">
+            <h1>condition</h1>
+            <strong class="value">{{condition}}</strong>
+        </div>
+        <div @fadein [@rotate]="rotate" class="sidecard humidity">
+            <h1>humidity</h1>
+            <strong class="value">{{humidity}}</strong>
+        </div>
+        <div @fadein [@rotate]="rotate" class="sidecard cloud">
+            <h1>cloud</h1>
+            <strong class="value">{{cloud}}</strong>
+        </div>
+        <div @fadein [@rotate]="rotate" class="sidecard wind">
+            <h1>wind</h1>
+            <strong class="value">{{wind}}</strong>
+        </div>
+        <div @fadein [@rotate]="rotate" class="sidecard pressure">
+            <h1>pressure</h1>
+            <strong class="value">{{pressure}}</strong>
+        </div>
+    </div>
+</div>
